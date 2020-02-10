@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meat name="viewport" content="width=device-width, initial-sacale=1">
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-sacale=1"/>
             
         <!-- CSRF Tokenn -->
         {{-- 後の章で説明します --}}
@@ -18,7 +18,7 @@
         
         <!-- Fonts -->
         <link rel="dns-prefetch" href="http://fonts.gstatic/com">
-        <link href="http://fonts/googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
         
         <!-- Styles -->
         {{--Laravelの標準で用意されているCSSを読み込みます。 --}}
@@ -35,8 +35,7 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
-                    <button calss="navbar-toggler" type="button" data-toggle="collapse" d
-                    ata-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
