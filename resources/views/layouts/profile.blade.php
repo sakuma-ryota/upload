@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-sacale=1"/>
+        <title>WebpageCreate</title>
             
         <!-- CSRF Tokenn -->
         {{-- 後の章で説明します --}}
@@ -27,6 +28,7 @@
         <link href="{{ secure_asset('css/profile.css')}}" rel ="stylesheet">
     </head>
     <body>
+        <h1>ウェブページ作成画面</h1>
         <div id="app">
             
             {{-- 画面上部に表示するナビゲーションバーです。　--}}
@@ -54,7 +56,7 @@
                             {{-- ログインしていたらユーザー名とログアウトボタンの表示 --}}
                             @else
                                 <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded"false" v-pre>
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }} <span class="creat"></span>
                                     </a>
                                     
