@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-sacale=1">
-        <title>WebpageCreate</title>
+        <title>My プロフィール</title>
             
         <!-- CSRF Token -->
         {{-- 後の章で説明します --}}
@@ -28,9 +28,7 @@
         <link href="{{ secure_asset('css/profile.css')}}" rel ="stylesheet">
     </head>
     <body>
-        <h1>プロフィール画面</h1>
         <div id="app">
-            
             {{-- 画面上部に表示するナビゲーションバーです。　--}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">

@@ -18,10 +18,14 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'],
 function() {
+    //news
     Route::get('news/create', 'Admin\NewsController@add');
-    Route::get('news/create', 'Admin\NewsController@create');
+    Route::post('news/create', 'Admin\NewsController@create');
+    //pofile
     Route::get('profile/create', 'Admin\ProfileController@add');
+    Route::post('profile/create', 'Admin\ProfileController@create');
     Route::get('profile/edit', 'Admin\ProfileController@edit');
+    Route::post('pofile/edit', 'Admin\ProfileController@update');
 });
 
 

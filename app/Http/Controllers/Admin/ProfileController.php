@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 class ProfileController extends Controller
 {
     //以下にActionを追加
+    //また、formの送信先(<form action=”この部分”>)を、 
+    //Admin\ProfileController の create Action に指定してください。
     public function add()
     {
         return view('admin.profile.create');
@@ -15,6 +17,7 @@ class ProfileController extends Controller
     public function create()
     {
         return redirect('admin/profile/create');
+        return view('admin/profile/create');
     }
     public function edit()
     {
