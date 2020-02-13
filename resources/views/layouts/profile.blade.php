@@ -28,7 +28,7 @@
         <link href="{{ secure_asset('css/profile.css')}}" rel ="stylesheet">
     </head>
     <body>
-        <h1>ウェブページ作成画面</h1>
+        <h1>プロフィール画面</h1>
         <div id="app">
             
             {{-- 画面上部に表示するナビゲーションバーです。　--}}
