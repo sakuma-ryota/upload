@@ -5,26 +5,38 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+//以下の追記で、Profile Modelが扱えるようになる
+use App\Profile;
+
 class ProfileController extends Controller
 {
     //以下にActionを追加
-    //また、formの送信先(<form action=”この部分”>)を、 
-    //Admin\ProfileController の create Action に指定してください。
+
     public function add()
     {
         return view('admin.profile.create');
     }
-    public function create()
-    {
+    public function create(Request $request) {
+        //Varidationを行う
+        $this->validate($request, Profile::$rules);
+        
+        $profile = new Profile;
+        $form = $request->all();
+        
+        //フォームから送信されてきた_tokenを削除する
+        unset($form['_token']);
+        
+        //データベースに保存する
+        $profile->fill($form);
+        $profile->save();
+        
         return redirect('admin/profile/create');
         return view('admin/profile/create');
     }
-    public function edit()
-    {
+    public function edit() {
         return view('admin.profile.edit');
     }
-    public function update()
-    {
+    public function update() {
         return redirect('admin/profile/edit');
     }
 }
