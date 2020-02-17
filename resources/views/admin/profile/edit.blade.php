@@ -39,7 +39,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="introduction">自己紹介</label>
                         <div class="col-md-10">
-                            <texarea class="form-control" name="introduction" rows="10">{{ $profile_form->introduction }}</texarea>
+                            <textarea class="form-control" name="introduction" rows="10">{{ $profile_form->introduction }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -50,6 +50,19 @@
                         </div>
                     </div>
                 </form>
+                <!--記録した変更履歴を編集画面で参照できるようにする-->
+                <div class="row mt-5">
+                    <div class="col-md-4" mx-auto>
+                        <h2>編集履歴</h2>
+                        <ul class="list-group">
+                            @if ($profile_form->histories != NULL)
+                                @foreach ($profile_form-> histories as $history)
+                                    <li class="list-group-item">{{ $history->edited_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
             </div>    
         </div>
     </div>

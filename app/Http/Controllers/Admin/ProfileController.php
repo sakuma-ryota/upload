@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 //以下の追記で、Profile Modelが扱えるようになる
 use App\Profile;
 
+use App\ProfileHistory;
+
+use Carbon\carbon;
+
 class ProfileController extends Controller
 {
     //以下にActionを追加
@@ -43,7 +47,7 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         //validtationをかける
-        $this->validtate($request, Profile::$rules);
+        $this->validate($request, Profile::$rules);
         //Profile Modelからデータを格納する
         $profile = Profile::find($request->id);
         //送信されてきたフォームデータを格納する
@@ -52,7 +56,13 @@ class ProfileController extends Controller
         //該当するデータを上書きして保存する
         $profile->fill($profile_form)->save();
         
-        return redirect('admin/profile/edit');
+        //編集履歴追加
+        $history = new ProfileHistory;
+        $history->profile_id = $profile->id;
+        $history->edited_at = Carbon::now();
+        $history->save();
+        
+        return redirect('admin/profile/edit?id=1');
     }
     //データの削除アクション
     public function delete(Request $request)
