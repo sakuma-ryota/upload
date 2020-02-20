@@ -10,7 +10,7 @@ use App\Profile;
 
 use App\ProfileHistory;
 
-use Carbon\carbon;
+use Carbon\Carbon;
 
 class ProfileController extends Controller
 {

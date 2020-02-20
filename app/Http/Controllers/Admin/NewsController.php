@@ -10,7 +10,7 @@ use App\News;
 
 use App\History;
 
-use Carbon\carbon;
+use Carbon\Carbon;
 
 class NewsController extends Controller
 {
