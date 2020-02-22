@@ -29,6 +29,6 @@ class CreatePofileHistoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pofile_histories');
+        Schema::dropIfExists('profile_histories');
     }
 }
