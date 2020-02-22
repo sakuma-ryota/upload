@@ -3,18 +3,18 @@
 @section('content')
     <div class="container">
         <hr color="#c0c0c0">
-        <!--最新の-->
-            @if (!is_null($headline))
-              <div class="row">
-                <div class="headline col-md-10 mx-auto">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <p class="body mx-auto">{{ str_limit($headline->name, 650) }}</p>
-                    </div>
+          @if (!is_null($headline))
+            <div class="row">
+              <div class="headline col-md-10 mx-auto">
+                <h2 class="mx-auto">最新の更新</h2>
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="body mx-auto">{{ str_limit($headline->name, 650) }}</p>
                   </div>
                 </div>
               </div>
-            @endif
+            </div>
+          @endif
         <div class="row">
           <div class="posts col-md-10 mx-auto">
             @foreach($posts as $post)
