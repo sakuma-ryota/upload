@@ -14,7 +14,7 @@
                                     @if ($headline->image_path)
                                         <img src="{{ $headline->image_path }}">
                                     @endif
-                                </div>
+                                </div> 
                                 <div class="title p-2">
                                     <h1>{{ str_limit($headline->title, 70) }}</h1>
                                 </div>
